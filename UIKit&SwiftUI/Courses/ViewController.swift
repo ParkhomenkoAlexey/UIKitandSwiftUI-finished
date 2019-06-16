@@ -11,7 +11,6 @@ import SwiftUI
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
-    
     @IBOutlet weak var tableView: UITableView!
     var posts: [Post] = Post.fetchPosts()
     
@@ -40,12 +39,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let post = posts[indexPath.row]
+        let detailScreen = DetailScreen(object: post)
         
-        let detailsView = DetailScreen(object: post)
-        
-        let host = UIHostingController(rootView: detailsView)
+        let host = UIHostingController(rootView: detailScreen)
         navigationController?.pushViewController(host, animated: true)
     }
+    
 }
 
 

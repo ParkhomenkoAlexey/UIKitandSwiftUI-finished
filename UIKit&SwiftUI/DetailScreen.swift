@@ -1,8 +1,8 @@
 //
 //  DetailScreen.swift
-//  SwiftUIFirstDemo
+//  UIKit&SwiftUI
 //
-//  Created by Алексей Пархоменко on 12.06.2019.
+//  Created by Алексей Пархоменко on 16/06/2019.
 //  Copyright © 2019 Алексей Пархоменко. All rights reserved.
 //
 
@@ -20,15 +20,14 @@ struct DetailScreen : View {
                     .lineLimit(nil)
                     .font(.title)
             }
-            
             VStack(alignment: .leading, spacing: 12.0) {
                 Text("Описание")
-                .font(.title)
+                    .font(.title)
                 Text(object.descriprion)
-                .lineLimit(nil)
+                    .lineLimit(nil)
             }
             Spacer()
-        }.padding()
+            }.padding()
     }
 }
 
@@ -45,4 +44,5 @@ struct MainImage: View {
             .shadow(radius: 10)
     }
 }
+
 
